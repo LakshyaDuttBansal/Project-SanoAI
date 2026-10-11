@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#effaf6">
+  <title>Login | Sano AI</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <main class="auth-layout">
+
+    <!-- Left: Brand and introduction -->
+    <section class="brand-panel">
+      <a class="brand" href="login.html">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 42S5 30 5 17C5 7 17 3 24 13C31 3 43 7 43 17C43 30 24 42 24 42Z"
+              fill="currentColor"/>
+            <path d="M24 28C20 23 14 20 14 16C14 12 20 11 24 17C28 11 34 12 34 16C34 20 28 23 24 28Z"
+              fill="#E8F8F1"/>
+            <path d="M24 18V29M18.5 23.5H29.5"
+              stroke="#08704B" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>
+          <strong>Sano AI</strong>
+          <small>Your Personal Health Copilot</small>
+        </span>
+      </a>
+
+      <div class="brand-content">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          YOUR HEALTH, SIMPLIFIED
+        </div>
+
+        <h1>Your health journey,<br><span>simplified.</span></h1>
+        <p class="brand-description">
+          Securely organize your records and get clearer insights
+          into your health, all in one place.
+        </p>
+
+        <div class="feature-list">
+          <article class="feature">
+            <div class="feature-icon">♙</div>
+            <div>
+              <h3>Your privacy matters</h3>
+              <p>Keep your personal health information protected.</p>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">▤</div>
+            <div>
+              <h3>Understand your records</h3>
+              <p>Organize medical documents in one convenient place.</p>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">♡</div>
+            <div>
+              <h3>Stay on top of your care</h3>
+              <p>Manage records, medications and wellness together.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <p class="brand-footer">A simpler way to stay informed about your health.</p>
+      <div class="decor decor-one"></div>
+      <div class="decor decor-two"></div>
+    </section>
+
+    <!-- Right: Authentication form -->
+    <section class="form-panel">
+      <div class="auth-card">
+        <a class="mobile-brand" href="login.html">
+          <span class="brand-logo">♥</span>
+          <span><strong>Sano AI</strong><small>Your Personal Health Copilot</small></span>
+        </a>
+
+        <div class="form-heading">
+          <div class="welcome-icon" aria-hidden="true">✳</div>
+          <h2 id="formTitle">Welcome back</h2>
+          <p id="formSubtitle">Sign in to your account to continue.</p>
+        </div>
+
+        <div class="form-tabs" role="tablist" aria-label="Account access">
+          <button class="tab active" id="loginTab" type="button"
+            role="tab" aria-selected="true">Sign In</button>
+          <button class="tab" id="signupTab" type="button"
+            role="tab" aria-selected="false">Create Account</button>
+        </div>
+
+        <div id="message" class="message" role="status"
+          aria-live="polite" hidden></div>
+
+        <form id="authForm">
+          <div class="field" id="nameField" hidden>
+            <label for="name">Full name</label>
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">♙</span>
+              <input id="name" name="name" type="text"
+                placeholder="Enter your full name"
+                autocomplete="name" maxlength="100">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">✉</span>
+              <input id="email" name="email" type="email"
+                placeholder="Enter your email"
+                autocomplete="email" required maxlength="254">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">♙</span>
+              <input id="password" name="password" type="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required minlength="8" maxlength="128">
+              <button class="toggle-password" id="togglePassword"
+                type="button" aria-label="Show password">Show</button>
+            </div>
+            <small class="field-hint" id="passwordHint" hidden>
+              Use at least 8 characters.
+            </small>
+          </div>
+
+          <div class="form-options" id="loginOptions">
+            <label class="remember">
+              <input type="checkbox" id="remember" checked>
+              <span>Remember me on this device</span>
+            </label>
+            <button class="text-button" type="button" id="forgotPassword">
+              Forgot password?
+            </button>
+          </div>
+
+          <button class="submit-button" id="submitButton" type="submit">
+            <span id="submitText">Sign In</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <div class="divider"><span>SECURE ACCESS</span></div>
+
+        <div class="security-note">
+          <span aria-hidden="true">♧</span>
+          <p>Your account is connected through secure authentication.</p>
+        </div>
+
+        <p class="switch-prompt" id="switchPrompt">
+          New to Sano AI?
+          <button type="button" class="text-button" id="switchMode">
+            Create account
+          </button>
+        </p>
+
+        <p class="disclaimer">
+          Sano AI supports your healthcare journey but does not replace
+          professional medical advice.
+        </p>
+      </div>
+
+      <p class="copyright">© 2026 Sano AI · Your health, your journey.</p>
+    </section>
+  </main>
+</body>
+</html>
