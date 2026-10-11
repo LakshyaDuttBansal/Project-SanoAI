@@ -1,0 +1,5 @@
+Patient: Demo
+Date: 2025-04-10
+Diagnosis: Hypertension
+Rx: Amlodipine 5mg 1 tablet daily, Metformin 500mg twice daily
+Advice: review in 30 days
